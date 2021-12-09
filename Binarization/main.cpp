@@ -1,4 +1,10 @@
-/* This program takes a color image, converts it to grayscale, Gaussian blurs and downscales the grayscale image by a factor of 2 twice, then uses Canny edge detection to binarize the twice-reduced image.  It outputs the RGB pixel value at a particular point in the color image, the gray pixel value at that point in the grayscale image, and the pixel value at that point in the binarized photo.  Then it sets the pixel value at that point in the binarized photo to a different value and displays the resulting binarized photo and the grayscale image.
+/* This program takes a color image, converts it to grayscale, Gaussian blurs and
+ downscales the grayscale image by a factor of 2 twice, then uses Canny edge
+ detection to binarize the twice-reduced image.  It outputs the RGB pixel value
+ at a particular point in the color image, the gray pixel value at that point in
+ the grayscale image, and the pixel value at that point in the binarized photo.
+ Then it sets the pixel value at that point in the binarized photo to a different
+ value and displays the resulting binarized photo and the grayscale image.
  Color image used was fruits.jpg  */
 
 #include <iostream>
