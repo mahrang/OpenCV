@@ -1,4 +1,5 @@
-/*  This program will display a photo, play a video, or stream the webcam feed back to the user depending on the input file provided.
+/*  This program will display a photo, play a video, or stream the webcam feed
+ back to the user depending on the input file provided.
  If file on disk is an image, argument passed should be "--image <file path>".
  If file on disk is a video, argument passed should be "--video <file path>".
  If no file is provided, it will stream the webcam feed back to the user. */
