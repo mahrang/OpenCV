@@ -1,8 +1,6 @@
-/* This program records and saves video from file or webcam into "output.mp4"
- file.
+/* This program records and saves video from file or webcam into "output.mp4" file.
  If input video is provided, program will play video and save it in "output.mp4".
- If no input is provided, program will stream webcam and save the stream in
- "output.mp4". */
+ If no input is provided, program will stream webcam and save the stream in "output.mp4". */
 
 #include <iostream>
 #include <opencv2/highgui/highgui.hpp>
@@ -23,8 +21,11 @@ int main(int argc, const char * argv[]) {
         return -1;
     }
     
-    cv::VideoWriter out("output.mp4", CV_FOURCC('a','v','c','1'), 30.0,
-                        cv::Size( 960, 540 ));
+    cv::VideoWriter out("/Users/mbs/Desktop/output.mp4", CV_FOURCC('a','v','c','1'), 30.0, cv::Size( 960, 540 ));
+    //"output.mp4", CV_FOURCC('a','v','c','1') works
+    //"output.mp4", CV_FOURCC('m','j','p','g') works
+    //"output.mp4", CV_FOURCC('m','p','4','v') doesn't work
+    //"output.m4v", CV_FOURCC('m','p','4','v') doesn't work
     if (!out.isOpened()) {
         cout << "Unable to record video"  << endl;
         return -1;
