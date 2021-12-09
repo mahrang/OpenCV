@@ -1,10 +1,11 @@
-/*  This program superimposes 1 face onto another in a photo.
- Need to use photos provided with this code because it is written specifically
- for these photos.  If the location or size of faces in photos is different than
- those in the photos provided, this code won't work as well.
-Arguments passed need to be in this order:
- faceTemplate.jpg file path
- faces.png file path
+/* This program superimposes 1 face onto another in a photo.
+ Need to use photos provided with this code because it is written
+ specifically for these photos.  If the location or size of faces in photos
+ is different than those in the photos provided, this code won't work as
+ well.
+ Arguments passed need to be in this order:
+ faceTemplate.jpg
+ faces.png
  230
  155
  0.8
@@ -63,9 +64,10 @@ int main( int argc, const char** argv )
     // Two more arguments set the blending coefficients.
     //
     double alpha = (double)atof(argv[5]);  // alpha = 0.8
-    double beta  = (double)atof(argv[6]);  // beta = 0.2
+    double beta  = (double)atof(argv[6]);  // beta = 0.2, beta = 1 - alpha
 
     cv::Mat roi1( src1, cv::Rect(0,0,from_w - 1,from_h - 1) ); //Just take the whole thing
+    // roi2 is just the man's face in faces.png
     cv::Mat roi2( src2, cv::Rect(x,y,from_w - 1, from_h - 1) );
 
     // Blend together the image src2 onto the image src1
@@ -78,7 +80,7 @@ int main( int argc, const char** argv )
     cv::namedWindow( "Alpha Blend", 1 );
     cv::imshow( "Alpha Blend", src2 );
 
-    // Leave the window up and runnnig until the user hits a key
+    // Leave the window up and running until the user hits a key
     //
     cv::waitKey( 0 );
 
