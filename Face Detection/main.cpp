@@ -1,4 +1,8 @@
-/*  This program detects faces in an image/video using Haar cascade classifier and it outputs 2 windows:  1 showing faces detected with rectangles drawn around the faces, the other showing a skull superimposed on faces detected.  This program accepts image and video files as input, but not webcam.  You can also alpha-blend the skull over the faces.  Read comments below for part b.
+/*  This program detects faces in an image/video using Haar cascade classifier
+ and it outputs 2 windows:  1 showing faces detected with rectangles drawn around
+ the faces, the other showing a skull superimposed on faces detected.  This
+ program accepts image and video files as input, but not webcam.  You can also
+ alpha-blend the skull over the faces.  Read comments below for part b.
  Inputs supplied were in this order:
  --cascade=/Users/.../My_Code/haarcascade_frontalface_alt.xml
  --scale=1.3
