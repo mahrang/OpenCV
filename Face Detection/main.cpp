@@ -6,7 +6,7 @@
  Inputs supplied were in this order:
  --cascade=/Users/.../My_Code/haarcascade_frontalface_alt.xml
  --scale=1.3
- lena.jpg
+ lena.jpg or faces.png
  skull.jpg  */
 
 #include "opencv2/objdetect.hpp"
